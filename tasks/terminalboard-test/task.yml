@@ -15,6 +15,6 @@ run:
 
 params:
   TERMINALBOARD_DIR: gopath/src/github.com/pivotal-cf/terminalboard
-  CONCOURSE_HOST: ~
-  CONCOURSE_USERNAME: ~
-  CONCOURSE_PASSWORD: ~
+  CONCOURSE_HOST:
+  CONCOURSE_USERNAME:
+  CONCOURSE_PASSWORD:
