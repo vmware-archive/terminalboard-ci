@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -eux
+
+root_dir="${PWD}"
+
+# Inputs
+TERMINALBOARD_DIR="${root_dir}/${TERMINALBOARD_DIR:?"\$TERMINALBOARD_DIR not set"}"
+
+export GOPATH="${PWD}/gopath"
+export PATH="${GOPATH}/bin:${PATH}"
+
+go get github.com/onsi/ginkgo/ginkgo
+
+"${TERMINALBOARD_DIR}/bin/test"
