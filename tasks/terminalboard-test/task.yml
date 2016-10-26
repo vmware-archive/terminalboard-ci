@@ -14,4 +14,4 @@ run:
   path: terminalboard-ci/tasks/terminalboard-test/task
 
 params:
-  PIVNET_RESOURCE_DIR: gopath/src/github.com/pivotal-cf/terminalboard
+  TERMINALBOARD_DIR: gopath/src/github.com/pivotal-cf/terminalboard
