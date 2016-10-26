@@ -23,3 +23,8 @@ jobs:
       resource: terminalboard-ci-repo
   - task: test
     file: terminalboard-ci/tasks/terminalboard-test/task.yml
+    params:
+      CONCOURSE_HOST: {{terminalboard_concourse_host}}
+      CONCOURSE_USERNAME: {{terminalboard_concourse_username}}
+      CONCOURSE_PASSWORD: {{terminalboard_concourse_password}}
+
