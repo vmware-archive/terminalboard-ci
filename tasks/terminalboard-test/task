@@ -7,6 +7,10 @@ root_dir="${PWD}"
 # Inputs
 TERMINALBOARD_DIR="${root_dir}/${TERMINALBOARD_DIR:?"\$TERMINALBOARD_DIR not set"}"
 
+: "${CONCOURSE_HOST}"
+: "${CONCOURSE_USERNAME}"
+: "${CONCOURSE_PASSWORD}"
+
 export GOPATH="${PWD}/gopath"
 export PATH="${GOPATH}/bin:${PATH}"
 
