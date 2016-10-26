@@ -1,0 +1,25 @@
+---
+resources:
+- name: terminalboard-ci-repo
+  type: git
+  source:
+    uri: https://github.com/pivotal-cf/terminalboard-ci
+    branch: master
+
+- name: terminalboard-repo
+  type: git
+  source:
+    uri: https://github.com/pivotal-cf/terminalboard
+    branch: master
+
+jobs:
+- name: terminalboard-test
+  plan:
+  - aggregate:
+    - get: terminalboard
+      resource: terminalboard-repo
+      trigger: true
+    - get: terminalboard-ci
+      resource: terminalboard-ci-repo
+  - task: test
+    file: terminalboard-ci/tasks/terminalboard-test/task.yml
